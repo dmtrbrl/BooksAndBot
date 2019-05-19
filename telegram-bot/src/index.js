@@ -1,7 +1,5 @@
-import dotenv from "dotenv";
+import {} from "dotenv/config";
 import Telegraf from "telegraf";
-
-dotenv.config();
 
 const books = [
   {
