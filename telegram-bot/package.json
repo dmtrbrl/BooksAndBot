@@ -1,0 +1,24 @@
+{
+  "name": "books-and-bot-telegram",
+  "version": "1.0.0",
+  "description": "Telegram bot",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/index.js"
+  },
+  "author": "dmtrbrl <dmytro.barylo@gmail.com> (https://github.com/dmtrbrl)",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "telegraf": "^3.29.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "nodemon": "^1.19.0"
+  }
+}
