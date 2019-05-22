@@ -10,7 +10,6 @@ export default async query => {
   const url = `https://www.goodreads.com/search/index.xml?key=${
     process.env.GOODREADS_API_KEY
   }&q=${query}&field=title`;
-  console.log(url);
 
   try {
     const response = await fetch(url);
