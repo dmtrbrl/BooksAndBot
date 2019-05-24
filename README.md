@@ -6,7 +6,7 @@ Powered by [Goodreads](https://www.goodreads.com/).
 
 ## Demo
 
-![How it works](https://github.com/dmtrbrl/BooksAndBot/blob/master/demo/demo.gif?raw=true)
+![How it works](https://media.giphy.com/media/ekYwbZFeSVk7jsDFKZ/giphy.gif)
 
 ## Development
 
