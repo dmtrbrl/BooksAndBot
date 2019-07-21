@@ -23,17 +23,25 @@ export default async query => {
         let author = `by ${book.author.map(a => a.name).join(", ")}`;
         let url = `https://www.goodreads.com/book/show/${book.id[0]._}`;
         let thumb_url = book.image_url[0];
-        if (thumb_url.indexOf("nophoto") === -1) {
-          // Get a large cover instead of medium
-          let n = thumb_url.lastIndexOf("m/");
-          thumb_url =
-            thumb_url.slice(0, n) + thumb_url.slice(n).replace("m/", "l/");
+        let cover_url = null;
+
+        // Using dirty and unstable way to get a book cover :(
+        if (thumb_url.indexOf("._SX") !== -1) {
+          let n = thumb_url.lastIndexOf("._SX");
+          cover_url = `${thumb_url.slice(0, n)}._SY400_.jpg`;
+        } else if (thumb_url.indexOf("._SY") !== -1) {
+          let n = thumb_url.lastIndexOf("._SY");
+          cover_url = `${thumb_url.slice(0, n)}._SY400_.jpg`;
+        } else {
+          cover_url = thumb_url;
         }
+
         return {
           title,
           author,
           url,
-          thumb_url
+          thumb_url,
+          cover_url
         };
       });
   } catch (error) {

@@ -6,7 +6,7 @@ const createMessageText = book => {
   return `
 <strong>${book.title}</strong>
 <em>${book.author}</em>
-<a href="${book.thumb_url}">&#8205;</a>`;
+<a href="${book.cover_url}">&#8205;</a>`;
 };
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
@@ -36,7 +36,6 @@ bot.on("inline_query", async ctx => {
           }
         }))
       : [];
-
   ctx.answerInlineQuery(results);
 });
 bot.launch();
