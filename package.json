@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
     "build": "babel src --out-dir dist",
-    "serve": "node dist/index.js",
-    "now-start": "node dist/index.js"
+    "serve": "node dist/index.js"
   },
   "author": "dmtrbrl <dmytro.barylo@gmail.com> (https://github.com/dmtrbrl)",
   "license": "ISC",
