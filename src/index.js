@@ -4,7 +4,6 @@ import searchBooks from "./searchBooks";
 
 const BOT_TOKEN = process.env.BOT_TOKEN || '';
 const PORT = process.env.PORT || 3000;
-const URL = process.env.URL || 'https://books-and-bot.herokuapp.com/';
 
 const createMessageText = book => {
   return `
@@ -42,6 +41,5 @@ bot.on("inline_query", async ctx => {
       : [];
   ctx.answerInlineQuery(results);
 });
-bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
-bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+bot.startWebhook('/', null, PORT);
 bot.launch();
