@@ -13,7 +13,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "dotenv": "^8.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "telegraf": "^3.34.1",
     "xml2js-es6-promise": "^1.1.1"
   },
